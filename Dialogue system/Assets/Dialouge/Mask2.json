@@ -1,0 +1,1 @@
+﻿{"inkVersion":21,"root":[["^Mask : Did you collected the fruits for me?","\n","ev","str","^Yes","/str","/ev",{"*":"0.c-0","flg":20},"ev","str","^No","/str","/ev",{"*":"0.c-1","flg":20},{"c-0":["\n","^Mask : That's Great!!","\n",{"->":"0.g-0"},{"#f":5}],"c-1":["\n","^Mask: No problem!","\n",{"->":"0.g-0"},{"#f":5}],"g-0":["done",{"#f":5}]}],"done",{"#f":1}],"listDefs":{}}
