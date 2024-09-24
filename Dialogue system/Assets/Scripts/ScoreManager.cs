@@ -6,14 +6,30 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    public static int score;
+    [SerializeField] private string Id;
 
+    [ContextMenu("Generate Guid for Id")]
+    private void GenerateGuid()
+    {
+        Id = System.Guid.NewGuid().ToString();
+    }
+
+
+    public TextMeshProUGUI scoreText;
+    public static int coin;
+    private bool collected = false;
+    private SpriteRenderer visual;
+
+    private void Awake()
+    {
+        visual = GetComponent<SpriteRenderer>();
+
+    }
     // Creating scoring system
     public void addScore()
     {
-        score++;
-        scoreText.text = score.ToString();
+        coin++;
+        scoreText.text = coin.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +40,9 @@ public class ScoreManager : MonoBehaviour
     }
     private void Update()
     {
-        scoreText.text = "" + score;
+        scoreText.text = "" + coin;
     }
 
+   
+   
 }

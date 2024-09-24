@@ -26,6 +26,7 @@ public class DialougeTrigger : MonoBehaviour
             Notification.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
+
                 DialougeManager.GetInstance().EnterDialougeMode(inkJSON);
             }
                 
